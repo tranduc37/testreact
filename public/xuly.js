@@ -1,10 +1,14 @@
 var TranDuc = React.createClass({
 
+    layThongTin: function() {
+        alert(this.props.children);
+    },
         render : function(){
             return(
                 <div>
                     <h1 className="color"> {this.props.ten} - {this.props.time}</h1>
                     <p>{this.props.children}</p>
+                    <button onClick={this.layThongTin}>LAY THONG TIN</button>
                     <KhoaHoc/>
                 </div>
             );
