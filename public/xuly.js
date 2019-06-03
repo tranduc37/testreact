@@ -1,3 +1,7 @@
+function getName(name){
+    alert(name);
+}
+
 var TranDuc = React.createClass({
 
     layThongTin: function() {
@@ -8,7 +12,7 @@ var TranDuc = React.createClass({
                 <div>
                     <h1 className="color"> {this.props.ten} - {this.props.time}</h1>
                     <p>{this.props.children}</p>
-                    <button onClick={this.layThongTin}>LAY THONG TIN</button>
+                    <button onClick={()=>{var str =this.props.ten + ' ' + this.props.time; getName(str)}}>LAY THONG TIN</button>
                     <KhoaHoc/>
                 </div>
             );
